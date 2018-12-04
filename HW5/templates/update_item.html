@@ -1,0 +1,11 @@
+<form method= 'POST'>
+	{{form.newRating.label }} {{ form.newRating() }}
+	{{ form.update() }}
+	{{ form.hidden_tag() }}
+</form>
+
+<div>
+{% for message in get_flashed_messages() %}
+{{ message }}
+{% endfor %}
+</div>
