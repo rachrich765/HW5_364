@@ -171,8 +171,7 @@ def delete(lst):
         db.session.commit()
         flash("Deleted list" + " " + str(lst))
         return redirect(url_for('all_lists'))
-    flash(form.errors)
-    return "did not delete the list!"
+    return redirect(url_for('/delete', lst=lst))
      # Replace with code
     # This code should successfully delete the appropriate todolist
     # Should flash a message about what was deleted, e.g. Deleted list <title of list>
